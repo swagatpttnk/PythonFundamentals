@@ -141,6 +141,6 @@ class DAO:
         sqlquery = "DELETE FROM Books WHERE name=?"
         connection = sqlite3.connect('my_database.db')
         cursor = connection.cursor()
-        cursor.execute(sqlquery, (book_name))
+        cursor.execute(sqlquery, (book_name,))
         connection.commit()
         connection.close()
